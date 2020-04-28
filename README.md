@@ -7,7 +7,7 @@ On Server:
   
  * Create a new host for each twilio account you want to monitor
 
- * Theses hosts don't need a zabbix-agent, all requests will be made by the zabbix server (you can use 127.0.0.1 for then)
+ * Theses hosts don't need a zabbix-agent, all requests will be made by the zabbix server (you can use 127.0.0.1 for them)
 
  * For each created host (twilio account) create the following **Macros**:
     * {$AUTH_TOKEN} -> you_twilio_account_auth_token
@@ -24,6 +24,8 @@ I used this documentation to make this template: https://www.twilio.com/docs/usa
 
 # Triggers
 
-There is a trigger for when the balance is below 5 dolars. This value can be changed globaly in the template Macro. But you can also change this for each account, in hosts Macro -> Inherited and host macros
+There is a trigger for when the balance is below 5 dolars. This value can be changed globaly in the template Macro. But you can also change this for each account
+
+ * host -> Macro -> Inherited and host macros
 
 
